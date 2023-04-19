@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+   <head>
+   </head>
+   <body style="display:flex; flex-direction:row;">
+      <img src="" id="leftImages" onclick="nextslideLeft()"
+         width="560" height="560"/>
+      <img src="" id="rightImages" onclick="nextslideRight()"
+         width="560" height="560"/>
+      <script type="text/javascript">
+         var leftImages = [
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/a7467c94-f27e-4086-8243-bddb2bc263a1_rw_1920.png?h=1a25eefd629bca60daedef9e1c0bd631",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/449d7a15-9d76-4454-a985-793d96f7c57d_rw_1920.png?h=b68b8b3bf774087834a84035b339488d",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/f76e921b-85a5-4626-9899-9e00b7cae4a0_rw_1920.png?h=057faa1917437f8040a1be2f4f904563",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/eb72def0-8c71-4f0f-bbfd-d6303ec4e55a_rw_1920.png?h=ac50507e9b7678648d9bffeb6395996f"
+         ]
+         
+         document.getElementById('leftImages').src = leftImages[0]
+         
+         var currentpicLeft = 1;
+         var lastpicLeft = leftImages.length-1;
+         function nextslideLeft()
+         {
+             if (currentpicLeft == lastpicLeft)
+             {
+                 currentpicLeft = 0;
+                 document.getElementById('leftImages').src = leftImages[currentpicLeft];
+             }
+             else
+             {
+                 currentpicLeft++;
+                 document.getElementById('leftImages').src = leftImages[currentpicLeft];
+             }
+         }
+         
+         var rightImages = [
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/c4428811-2755-4168-a862-3f5c53df068f_rw_1920.png?h=008c063e36585605b90b622f649aba27",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/4d144e23-ce7d-4fb0-8a24-4225d141fa09_rw_1920.png?h=e1ed035155d1102d2bb763f096d7e98d",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/10512be1-2a12-46ab-a2bb-90fa59cad344_rw_1920.png?h=4decc6cab3c8b4f064c939915e8bda4a",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/b1166c50-a255-4f27-b7f2-fd2187cccd14_rw_1920.png?h=dd536fba9d7690428df3e55b2056ef1d",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/2678b6a1-5865-4eb1-b0fe-10de6256e9a5_rw_1920.png?h=75c3268313a51a7510ed6297566b682c",
+         "https://cdn.myportfolio.com/cda98882-874b-448f-be6f-e922092e4247/c5b3a528-4230-4cf0-893b-179b2a62f797_rw_1920.png?h=d4d68da907f7a8a77fbb3c35aa2a61d9"
+         ]
+         
+         document.getElementById('rightImages').src = rightImages[0]
+         
+         var currentpicRight = 1;
+         var lastpicRight = rightImages.length-1;
+         function nextslideRight()
+         {
+             if (currentpicRight == lastpicRight)
+             {
+                 currentpicRight = 0;
+                 document.getElementById('rightImages').src = rightImages[currentpicRight];
+             }
+             else
+             {
+                 currentpicRight++;
+                 document.getElementById('rightImages').src = rightImages[currentpicRight];
+             }
+         }
+      </script>   
+   </body>
+</html>
